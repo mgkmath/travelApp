@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+         <head>
+                    <title>Brindavan garden booking form</title>
+
+
+         </head>
+<body>
+<center>
+<form>
+<fieldset>
+<table>
+<h1>Booking Form</h1>
+<tr>
+<th>Name</th>
+<td>:</td>
+<td><input type="text" name="name" id="name1" placeholder="Enter your name"</td>
+</tr>
+<tr>
+<th>Email id</th>
+<td>:</td>
+<td><input type="text" name="email" id="email1" placeholder="Enter your id"</td>
+</tr>
+<tr>
+<th>Phone number</th>
+<td>:</td>
+<td><input type="number" name="phone" id="phone1" placeholder="Enter your phone number"</td>
+</tr>
+<tr>
+<th>Date of booking</th>
+<td>:</td>
+<td><input type="date" name="date" id="date1" placeholder="Enter date"</td>
+</tr>
+<tr>
+<th>One ticket Rate  </th>
+<td>:</td>
+<td><input readonly type="text" name="people1" id="people1" value="50" readonly</td>
+
+
+</tr>
+<tr>
+<th>Number of people</th>
+<td>:</td>
+<td><input type="number" name="people2" id="people2" oninput="calculate()" /></td>
+</tr>
+
+
+<th>Amount Payble </th>
+<td>:</td>
+<td><input readonly type="number" name="amount" id="amount" readonly </td>
+
+
+<script>
+         //function that display value
+         function calculate()
+         {
+             let x = document.getElementById("people1").value
+             let y = document.getElementById("people2").value
+             let z = x * y;
+              document.getElementById("amount").value = z;
+         }
+     
+      </script>
+
+</table>
+</fieldset>
+</form>
+
+<form action="thank you for booking.html" method="post">
+
+<tr>
+                                                                  <td>
+                                                    <input type="submit" name="submit" value="book">
+                                                          </td>
+</tr>
+</center>
+</body>
+</html>
